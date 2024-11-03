@@ -1,0 +1,89 @@
+// Define color variables
+$primary-color: #007bff;
+$secondary-color: #ff4500;
+$text-color: #333;
+$bg-light: #f9f9f9;
+
+.about-us {
+  padding: 2rem;
+  background-color: $bg-light;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .image {
+    flex: 1 1 300px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .content {
+    flex: 2 1 500px;
+    color: $text-color;
+
+    h2 {
+      color: $primary-color;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: $secondary-color;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      list-style: disc inside;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styling for smaller screens
+@media (max-width: 768px) {
+  .about-us {
+    padding: 1rem;
+
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .content {
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}

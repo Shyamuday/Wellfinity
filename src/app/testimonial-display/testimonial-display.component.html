@@ -1,0 +1,11 @@
+<div class="testimonial-container">
+  <h2>Patient Testimonials</h2>
+      <h3>What Our Patients Say:</h3>
+
+  <div class="testimonials-list">
+    <div *ngFor="let testimonial of testimonials" class="testimonial">
+      <h4>{{ testimonial.name }}</h4>
+      <p>{{ testimonial.message }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+header {
+  background-color: #007bff; // Header background color
+  color: #fff;
+  padding: 1rem;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffe600; // Hover color for links
+      }
+    }
+
+    // "Call Us" link style
+    a[href^="tel:"] {
+      background-color: #ff4500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 1rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          color: inherit;
+          font-size: 1rem;
+          padding: 0.5rem 0.75rem;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2); // Background color on hover
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styling for mobile devices
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+
+    nav {
+      flex-direction: column;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
